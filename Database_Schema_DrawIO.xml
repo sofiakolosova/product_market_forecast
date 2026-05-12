@@ -1,0 +1,293 @@
+<mxfile host="app.diagrams.net" modified="2024-05-12T00:00:00.000Z" agent="5.0" version="21.5.0" type="device">
+  <diagram id="R2lEEwgBhxs9fBPitvZ3" name="Database Schema">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- CATEGORIES Table -->
+        <mxCell id="t_cat" value="Categories" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#FFE6B6;strokeColor=#D4860D;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="50" y="100" width="180" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_cat_pk" value="+ category_id: INT (PK)" style="text;strokeColor=#D4860D;fillColor=#FFE6B6;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_cat" vertex="1">
+          <mxGeometry y="26" width="180" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_cat_1" value="category_name: VARCHAR(100)" style="text;strokeColor=#D4860D;fillColor=#FFE6B6;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_cat" vertex="1">
+          <mxGeometry y="48" width="180" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_cat_2" value="category_code: VARCHAR(10)" style="text;strokeColor=#D4860D;fillColor=#FFE6B6;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_cat" vertex="1">
+          <mxGeometry y="70" width="180" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_cat_3" value="is_active: BOOLEAN" style="text;strokeColor=#D4860D;fillColor=#FFE6B6;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_cat" vertex="1">
+          <mxGeometry y="92" width="180" height="22" as="geometry"/>
+        </mxCell>
+        
+        <!-- TIME_DIMENSION Table -->
+        <mxCell id="t_time" value="Time_Dimension" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#F0F4C3;strokeColor=#558B2F;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="310" y="100" width="180" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_time_pk" value="+ date: DATE (PK)" style="text;strokeColor=#558B2F;fillColor=#F0F4C3;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_time" vertex="1">
+          <mxGeometry y="26" width="180" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_time_1" value="year: INT, month: INT" style="text;strokeColor=#558B2F;fillColor=#F0F4C3;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_time" vertex="1">
+          <mxGeometry y="48" width="180" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_time_2" value="quarter: INT, season: VARCHAR" style="text;strokeColor=#558B2F;fillColor=#F0F4C3;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_time" vertex="1">
+          <mxGeometry y="70" width="180" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_time_3" value="is_promo_period: BOOLEAN" style="text;strokeColor=#558B2F;fillColor=#F0F4C3;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_time" vertex="1">
+          <mxGeometry y="92" width="180" height="22" as="geometry"/>
+        </mxCell>
+        
+        <!-- STORES Table -->
+        <mxCell id="t_stores" value="Stores" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#B3E5FC;strokeColor=#01579B;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="570" y="100" width="180" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_stores_pk" value="+ store_id: INT (PK)" style="text;strokeColor=#01579B;fillColor=#B3E5FC;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_stores" vertex="1">
+          <mxGeometry y="26" width="180" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_stores_1" value="store_name: VARCHAR(100)" style="text;strokeColor=#01579B;fillColor=#B3E5FC;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_stores" vertex="1">
+          <mxGeometry y="48" width="180" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_stores_2" value="city: VARCHAR(50)" style="text;strokeColor=#01579B;fillColor=#B3E5FC;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_stores" vertex="1">
+          <mxGeometry y="70" width="180" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_stores_3" value="region, store_type" style="text;strokeColor=#01579B;fillColor=#B3E5FC;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_stores" vertex="1">
+          <mxGeometry y="92" width="180" height="22" as="geometry"/>
+        </mxCell>
+        
+        <!-- PRODUCTS Table -->
+        <mxCell id="t_prod" value="Products" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#E8D5F2;strokeColor=#6C3483;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="830" y="100" width="190" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_prod_pk" value="+ product_id: INT (PK)" style="text;strokeColor=#6C3483;fillColor=#E8D5F2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_prod" vertex="1">
+          <mxGeometry y="26" width="190" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_prod_1" value="# category_id: INT (FK)" style="text;strokeColor=#6C3483;fillColor=#E8D5F2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_prod" vertex="1">
+          <mxGeometry y="48" width="190" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_prod_2" value="product_name: VARCHAR(200)" style="text;strokeColor=#6C3483;fillColor=#E8D5F2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_prod" vertex="1">
+          <mxGeometry y="70" width="190" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_prod_3" value="sku, unit_price" style="text;strokeColor=#6C3483;fillColor=#E8D5F2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_prod" vertex="1">
+          <mxGeometry y="92" width="190" height="22" as="geometry"/>
+        </mxCell>
+        
+        <!-- SALES_DETAILS Table -->
+        <mxCell id="t_sales" value="Sales_Details" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#C8E6C9;strokeColor=#1B5E20;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="50" y="350" width="210" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_sales_pk" value="+ sale_id: INT (PK)" style="text;strokeColor=#1B5E20;fillColor=#C8E6C9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_sales" vertex="1">
+          <mxGeometry y="26" width="210" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_sales_1" value="# sales_date: DATE (FK)" style="text;strokeColor=#1B5E20;fillColor=#C8E6C9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_sales" vertex="1">
+          <mxGeometry y="48" width="210" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_sales_2" value="# store_id, # category_id: INT (FK)" style="text;strokeColor=#1B5E20;fillColor=#C8E6C9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_sales" vertex="1">
+          <mxGeometry y="70" width="210" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_sales_3" value="quantity_sold: INT" style="text;strokeColor=#1B5E20;fillColor=#C8E6C9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_sales" vertex="1">
+          <mxGeometry y="92" width="210" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_sales_4" value="unit_price, total_amount" style="text;strokeColor=#1B5E20;fillColor=#C8E6C9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_sales" vertex="1">
+          <mxGeometry y="114" width="210" height="22" as="geometry"/>
+        </mxCell>
+        
+        <!-- MARKET_DATA Table -->
+        <mxCell id="t_market" value="Market_Data" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#E1BEE7;strokeColor=#4A148C;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="330" y="350" width="230" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_market_pk" value="+ market_date: DATE (PK)" style="text;strokeColor=#4A148C;fillColor=#E1BEE7;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_market" vertex="1">
+          <mxGeometry y="26" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_market_1" value="# category_id: INT (FK)" style="text;strokeColor=#4A148C;fillColor=#E1BEE7;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_market" vertex="1">
+          <mxGeometry y="48" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_market_2" value="market_size: DECIMAL(15,2)" style="text;strokeColor=#4A148C;fillColor=#E1BEE7;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_market" vertex="1">
+          <mxGeometry y="70" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_market_3" value="market_share_percent: DECIMAL" style="text;strokeColor=#4A148C;fillColor=#E1BEE7;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_market" vertex="1">
+          <mxGeometry y="92" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_market_4" value="price_index, competitor_count" style="text;strokeColor=#4A148C;fillColor=#E1BEE7;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_market" vertex="1">
+          <mxGeometry y="114" width="230" height="22" as="geometry"/>
+        </mxCell>
+        
+        <!-- DATASET Table (MAIN) -->
+        <mxCell id="t_dataset" value="DATASET (MAIN TABLE)" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#FFE0B2;strokeColor=#E65100;fontSize=13;fontStyle=3;" parent="1" vertex="1">
+          <mxGeometry x="650" y="330" width="300" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_dataset_pk" value="+ sales_date: DATE (PK)" style="text;strokeColor=#E65100;fillColor=#FFE0B2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_dataset" vertex="1">
+          <mxGeometry y="26" width="300" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_dataset_pk2" value="+ category_id: VARCHAR(50) (PK)" style="text;strokeColor=#E65100;fillColor=#FFE0B2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_dataset" vertex="1">
+          <mxGeometry y="48" width="300" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_dataset_1" value="revenue_retail: DECIMAL(12,2)" style="text;strokeColor=#E65100;fillColor=#FFE0B2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_dataset" vertex="1">
+          <mxGeometry y="70" width="300" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_dataset_2" value="margin, network_coverage: DECIMAL" style="text;strokeColor=#E65100;fillColor=#FFE0B2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_dataset" vertex="1">
+          <mxGeometry y="92" width="300" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_dataset_3" value="data_quality_flag: VARCHAR(20)" style="text;strokeColor=#E65100;fillColor=#FFE0B2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_dataset" vertex="1">
+          <mxGeometry y="114" width="300" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_dataset_4" value="Source: GROUP BY Sales_Details + Market_Data" style="text;strokeColor=#E65100;fillColor=#FFE0B2;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontStyle=3;" parent="t_dataset" vertex="1">
+          <mxGeometry y="136" width="300" height="24" as="geometry"/>
+        </mxCell>
+        
+        <!-- FORECAST_OUTPUT Table -->
+        <mxCell id="t_forecast" value="Forecast_Output" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#FFCCBC;strokeColor=#BF360C;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="350" width="240" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_forecast_pk" value="+ forecast_id: INT (PK)" style="text;strokeColor=#BF360C;fillColor=#FFCCBC;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_forecast" vertex="1">
+          <mxGeometry y="26" width="240" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_forecast_1" value="# forecast_date: DATE (FK)" style="text;strokeColor=#BF360C;fillColor=#FFCCBC;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_forecast" vertex="1">
+          <mxGeometry y="48" width="240" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_forecast_2" value="# category_id: VARCHAR(50) (FK)" style="text;strokeColor=#BF360C;fillColor=#FFCCBC;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_forecast" vertex="1">
+          <mxGeometry y="70" width="240" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_forecast_3" value="forecast_revenue, forecast_margin" style="text;strokeColor=#BF360C;fillColor=#FFCCBC;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_forecast" vertex="1">
+          <mxGeometry y="92" width="240" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_forecast_4" value="confidence_level, lower/upper bound" style="text;strokeColor=#BF360C;fillColor=#FFCCBC;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_forecast" vertex="1">
+          <mxGeometry y="114" width="240" height="22" as="geometry"/>
+        </mxCell>
+        
+        <!-- MODEL_METRICS Table -->
+        <mxCell id="t_metrics" value="Model_Metrics" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#D1C4E9;strokeColor=#311B92;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1350" y="350" width="230" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_metrics_pk" value="+ metric_id: INT (PK)" style="text;strokeColor=#311B92;fillColor=#D1C4E9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_metrics" vertex="1">
+          <mxGeometry y="26" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_metrics_1" value="# category_id: VARCHAR(50) (FK)" style="text;strokeColor=#311B92;fillColor=#D1C4E9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=2;" parent="t_metrics" vertex="1">
+          <mxGeometry y="48" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_metrics_2" value="mape, rmse, mae: DECIMAL" style="text;strokeColor=#311B92;fillColor=#D1C4E9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_metrics" vertex="1">
+          <mxGeometry y="70" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_metrics_3" value="accuracy_percent, evaluation_date" style="text;strokeColor=#311B92;fillColor=#D1C4E9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_metrics" vertex="1">
+          <mxGeometry y="92" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_metrics_4" value="status: VARCHAR(20)" style="text;strokeColor=#311B92;fillColor=#D1C4E9;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="t_metrics" vertex="1">
+          <mxGeometry y="114" width="230" height="22" as="geometry"/>
+        </mxCell>
+        
+        <!-- RELATIONSHIPS -->
+        <!-- Products -> Categories -->
+        <mxCell id="rel_prod_cat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4860D;strokeWidth=2;exitX=0;exitY=0.5;entryX=1;entryY=0.5;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_prod" target="t_cat" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="160"/>
+              <mxPoint x="230" y="160"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Sales_Details -> Time_Dimension -->
+        <mxCell id="rel_sales_time" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#558B2F;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.3;entryY=1;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_sales" target="t_time" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="155" y="330"/>
+              <mxPoint x="354" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Sales_Details -> Stores -->
+        <mxCell id="rel_sales_stores" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#01579B;strokeWidth=2;exitX=1;exitY=0.3;entryX=0;entryY=0.5;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_sales" target="t_stores" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="380"/>
+              <mxPoint x="570" y="160"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Sales_Details -> Categories -->
+        <mxCell id="rel_sales_cat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4860D;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.5;entryY=1;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_sales" target="t_cat" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="155" y="340"/>
+              <mxPoint x="140" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Market_Data -> Time_Dimension -->
+        <mxCell id="rel_market_time" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#558B2F;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.7;entryY=1;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_market" target="t_time" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="445" y="330"/>
+              <mxPoint x="445" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Market_Data -> Categories -->
+        <mxCell id="rel_market_cat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4860D;strokeWidth=2;exitX=0;exitY=0.3;entryX=1;entryY=0.5;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_market" target="t_cat" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="370"/>
+              <mxPoint x="230" y="160"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Dataset -> Categories -->
+        <mxCell id="rel_dataset_cat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E65100;strokeWidth=2;exitX=0;exitY=0.5;entryX=1;entryY=0.5;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_dataset" target="t_cat" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="410"/>
+              <mxPoint x="230" y="160"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Dataset -> Time_Dimension -->
+        <mxCell id="rel_dataset_time" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E65100;strokeWidth=2;exitX=0.3;exitY=0;entryX=0.8;entryY=1;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_dataset" target="t_time" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="320"/>
+              <mxPoint x="445" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Forecast -> Categories -->
+        <mxCell id="rel_forecast_cat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#BF360C;strokeWidth=2;dashed=1;exitX=0;exitY=0.3;entryX=1;entryY=0.5;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_forecast" target="t_cat" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="370"/>
+              <mxPoint x="230" y="160"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Forecast -> Time_Dimension -->
+        <mxCell id="rel_forecast_time" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#BF360C;strokeWidth=2;dashed=1;exitX=0.2;exitY=0;entryX=0.9;entryY=1;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_forecast" target="t_time" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1110" y="330"/>
+              <mxPoint x="445" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Metrics -> Categories -->
+        <mxCell id="rel_metrics_cat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#311B92;strokeWidth=2;dashed=1;exitX=0;exitY=0.3;entryX=1;entryY=0.5;endArrow=ERmany;startArrow=ERone;" parent="1" source="t_metrics" target="t_cat" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="370"/>
+              <mxPoint x="230" y="160"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
